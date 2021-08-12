@@ -1,0 +1,12 @@
+ALTER TABLE resources();
+ALTER TABLE stages();
+ALTER TABLE roles();
+ALTER TABLE staff();
+ALTER TABLE activities();
+ALTER TABLE costs();
+ALTER TABLE activity_resources();
+ALTER TABLE plans();
+ALTER TABLE staff_roles();
+ALTER TABLE groups();
+ALTER TABLE reviews();
+ALTER TABLE actions();

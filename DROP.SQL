@@ -1,0 +1,12 @@
+DROP TABLE resources;
+DROP TABLE stages;
+DROP TABLE roles;
+DROP TABLE staff;
+DROP TABLE activities;
+DROP TABLE costs;
+DROP TABLE activity_resources;
+DROP TABLE plans;
+DROP TABLE staff_roles;
+DROP TABLE groups;
+DROP TABLE reviews;
+DROP TABLE actions;

@@ -1,0 +1,12 @@
+INSERT INTO resources();
+INSERT INTO stages();
+INSERT INTO roles();
+INSERT INTO staff();
+INSERT INTO activities();
+INSERT INTO costs();
+INSERT INTO activity_resources();
+INSERT INTO plans();
+INSERT INTO staff_roles();
+INSERT INTO groups();
+INSERT INTO reviews();
+INSERT INTO actions();
