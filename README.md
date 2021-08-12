@@ -1,2 +1,6 @@
 # ShreeChar
-DBMS Term_II
+CONTRIBUTORS:
+-aoz69
+-bliss-y
+-pasangggsss
+-KRABE
