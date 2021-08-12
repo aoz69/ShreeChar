@@ -1,6 +1,6 @@
 # ShreeChar
 CONTRIBUTORS:
 -aoz69
--bliss-y
+-bliss-y (leader : ))
 -pasangggsss
 -KRABE
