@@ -1,4 +1,4 @@
-CREATE TABLE resources(
+CREATE TABLE resources (
     resource_id NUMBER(3),
     resource_name VARCHAR2(20),
     brief VARCHAR2(10),
@@ -8,7 +8,8 @@ CREATE SEQUENCE resources_seq MINVALUE 1 MAXVALUE 999 START WITH 1 INCREMENT BY 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 CREATE TABLE stages(
     stage_id NUMBER(3),
-    stage_name VARCHAR2(20)
+    stage_name VARCHAR2(20),
+	stage_address VARCHAR2(20)
 );
 CREATE SEQUENCE stages_seq MINVALUE 1 MAXVALUE 999 START WITH 1 INCREMENT BY 1 CACHE 20;
 ------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -20,8 +21,10 @@ CREATE SEQUENCE roles_seq MINVALUE 1 MAXVALUE 999 START WITH 1 INCREMENT BY 1 CA
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 CREATE TABLE staff(
     staff_id NUMBER(3),
-    staff_name VARCHAR2(20),
-    staff_address VARCHAR2(20)
+    staff_name VARCHAR2(20) NOT NULL,
+    staff_address VARCHAR2(20),
+	ph_number VARCHAR2(10) NOT NULL,
+	gender CHAR DEFAULT 'M'
 );
 CREATE SEQUENCE staff_seq MINVALUE 1 MAXVALUE 999 START WITH 1 INCREMENT BY 1 CACHE 20;
 ------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -30,13 +33,15 @@ CREATE TABLE activities(
     activity_name VARCHAR2(20)
     start_time DATE,
     end_time DATE,
-    budget NUMBER(5)
+    budget NUMBER(5) check(budget > 0)
 );
 CREATE SEQUENCE activities_seq MINVALUE 1 MAXVALUE 999 START WITH 1 INCREMENT BY 1 CACHE 20;
 ------------------------------------------------------------------------------------------------------------------------------------------------------
+
 CREATE TABLE costs(
     cost_id NUMBER(3) ,
-    total_cost NUMBER(5)
+    total_cost NUMBER(5),
+	descript VARCHAR2(45)
 );
 CREATE SEQUENCE costs_seq MINVALUE 1 MAXVALUE 999 START WITH 1 INCREMENT BY 1 CACHE 20;
 ------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -58,7 +63,6 @@ CREATE SEQUENCE plans_seq MINVALUE 1 MAXVALUE 999 START WITH 1 INCREMENT BY 1 CA
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 CREATE TABLE staff_roles(
-    staff_role_id NUMBER(3) ,
     staff_id NUMBER(3),
     role_id NUMBER(3)
 );
