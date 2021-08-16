@@ -39,19 +39,16 @@ ALTER TABLE plans
 
 -- ALTER TABLE FOR staff_roles
 
-ALTER TABLE staff_roles 
-	ADD CONSTRAINT pk_resources
-	PRIMARY KEY (resource_id);
-
 ALTER TABLE staff_roles
 ADD CONSTRAINT fk_sr_staff
 FOREIGN KEY (staff_id)
-REFERENCES staff(staff_id);
+REFERENCES staff(staff_id)
+ON DELETE CASCADE;
 
-ALTER TABLE staff_roles
-ADD CONSTRAINT fk_sr_roles
-FOREIGN KEY (role_id)
-REFERENCES roles(role_id);
+ALTER TABLE staff_roles 
+ADD CONSTRAINT pk_resources
+PRIMARY KEY (resource_id);
+
 -- ----------------------------
 
 
