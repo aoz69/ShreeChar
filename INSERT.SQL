@@ -1,63 +1,129 @@
--- INSERT INTO resources
---     (resource_id, resource_name, brief, cost)
---     VALUES
---     (resources_seq.NEXTVAL, 'PEN' , 'Writes red' , 10),
-
---     (resources_seq.NEXTVAL, 'Computer' , 'Computes' , 800),
-
---     (resources_seq.NEXTVAL, 'Sofa' , 'Very comfortable' , 1200),
-
---     (resources_seq.NEXTVAL, 'Hammer' , 'Gold plated' , 15000),
-
---     (resources_seq.NEXTVAL, 'Shovel'  , 'For treasure hunt' , 500);
----------------------------------------------------------------------------------------------------------------------------------
+-- ----------STAFF TABLE ---------------------------------------------
+INSERT INTO staff
+    (staff_id , staff_name, staff_address , ph_number , gender)
+    VALUES
+(staff_seq.NEXTVAL, 'KUMAR LAMICHHANE' , 'KATHMANDU', '9841462819', 'M');
 
 
+INSERT INTO staff
+    (staff_id , staff_name, staff_address , ph_number , gender)
+    VALUES
+(staff_seq.NEXTVAL, 'PADUS POKHAREL' , '', '9841462819', 'M');
 
-INSERT INTO resources (resource_id, resource_name, brief)
-  WITH names AS ( 
-    SELECT resources_seq.NEXTVAL, 'Ruth',     'Fox'          FROM dual UNION ALL 
-    SELECT resources_seq.NEXTVAL, 'Isabelle', 'Squirrel'   FROM dual UNION ALL 
-    SELECT resources_seq.NEXTVAL, 'Justin',   'Frog'  FROM dual UNION ALL 
-    SELECT resources_seq.NEXTVAL, 'Lisa',     'Owl'    FROM dual 
-  ) 
-  SELECT * FROM names;
+INSERT INTO staff
+    (staff_id , staff_name, staff_address , ph_number , gender)
+    VALUES
+(staff_seq.NEXTVAL, 'KUMAR LAMICHHANE' , 'KATHMANDU', '9841462819', 'M');
 
--- INSERT INTO stages
---     (stage_id, stage_name)
---     VALUES
---     (stages_seq.NEXTVAL, 'dreams'),
+INSERT INTO staff
+    (staff_id , staff_name, staff_address , ph_number , gender)
+    VALUES
+(staff_seq.NEXTVAL, 'KUMAR LAMICHHANE' , 'KATHMANDU', '9841462819', 'M');
 
---     (stages_seq.NEXTVAL, 'dragon'),
+INSERT INTO staff
+    (staff_id , staff_name, staff_address , ph_number , gender)
+    VALUES
+(staff_seq.NEXTVAL, 'KUMAR LAMICHHANE' , 'KATHMANDU', '9841462819', 'M');
 
---     (stages_seq.NEXTVAL, 'Luck'),
+-- ---------------------------------------------  -----------------------------
 
---     (stages_seq.NEXTVAL, 'Ham'),
+-- ----------- 
+INSERT INTO activities
+    (activity_id , activity_name, start_time , end_time , budget)
+    VALUES
+(activities_seq.NEXTVAL, 'KUMAR ROAD' , '2003/05/03', 'yyyy/mm/dd', 5000);
 
---     (stages_seq.NEXTVAL, 'Shovel' , 'For treasure hunting');
+INSERT INTO activities
+    (activity_id , activity_name, start_time , end_time , budget)
+    VALUES
+(activities_seq.NEXTVAL, 'KUMAR ROAD' , '2003/05/03', 'yyyy/mm/dd', 5000);
+
+INSERT INTO activities
+    (activity_id , activity_name, start_time , end_time , budget)
+    VALUES
+(activities_seq.NEXTVAL, 'KUMAR ROAD' , '2003/05/03', 'yyyy/mm/dd', 5000);
+
+INSERT INTO activities
+    (activity_id , activity_name, start_time , end_time , budget)
+    VALUES
+(activities_seq.NEXTVAL, 'KUMAR ROAD' , '2003/05/03', 'yyyy/mm/dd', 5000);
+
+INSERT INTO activities
+    (activity_id , activity_name, start_time , end_time , budget)
+    VALUES
+(activities_seq.NEXTVAL, 'KUMAR ROAD' , '2003/05/03', 'yyyy/mm/dd', 5000);
+-- ---------------------------------------------------------------------------------------------------------------------------------
+
+INSERT INTO resources
+    (resource_id , resource_name, start_time , end_time , budget)
+    VALUES
+(activities_seq.NEXTVAL, 'KUMAR ROAD' , '2003/05/03', 'yyyy/mm/dd', 5000);
+
+
 
 
 -- ---------------------------------------------------------------------------------------------------------------------------------
+INSERT INTO activities
+    (activity_id , activity_name, start_time , end_time , budget)
+    VALUES
+(activities_seq.NEXTVAL, 'KUMAR ROAD' , '2003/05/03', 'yyyy/mm/dd', 5000),
 
--- INSERT INTO roles (role_id, role_name)
---     VALUES (roles_seq.NEXTVAL, 'sdasdsa');
 
----------------------------------------------------------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------------------------------------------------------
+INSERT INTO activities
+    (activity_id , activity_name, start_time , end_time , budget)
+    VALUES
+(activities_seq.NEXTVAL, 'KUMAR ROAD' , '2003/05/03', 'yyyy/mm/dd', 5000),
 
 
--- INSERT INTO activities
---     (activity_id , activity_name, start_time , end_time , budget)
---     VALUES
--- (activities_seq.NEXTVAL, 'KUMAR ROAD' , '2003/05/03', 'yyyy/mm/dd', 5000),
+-- ---------------------------------------------------------------------------------------------------------------------------------
+INSERT INTO activities
+    (activity_id , activity_name, start_time , end_time , budget)
+    VALUES
+(activities_seq.NEXTVAL, 'KUMAR ROAD' , '2003/05/03', 'yyyy/mm/dd', 5000),
 
--- (activities_seq.NEXTVAL, 'KUMAR ROAD' , '2003/05/03', 'yyyy/mm/dd', 5000),
--- (activities_seq.NEXTVAL, 'KUMAR ROAD' , '2003/05/03', 'yyyy/mm/dd', 5000);
 
---     -- (activities_seq.NEXTVAL, 'E'),
+-- ---------------------------------------------------------------------------------------------------------------------------------
+INSERT INTO activities
+    (activity_id , activity_name, start_time , end_time , budget)
+    VALUES
+(activities_seq.NEXTVAL, 'KUMAR ROAD' , '2003/05/03', 'yyyy/mm/dd', 5000),
 
---     -- (activities_seq.NEXTVAL, 'xx'),
 
---     -- (activities_seq.NEXTVAL, 'xx'),
+-- ---------------------------------------------------------------------------------------------------------------------------------
+INSERT INTO activities
+    (activity_id , activity_name, start_time , end_time , budget)
+    VALUES
+(activities_seq.NEXTVAL, 'KUMAR ROAD' , '2003/05/03', 'yyyy/mm/dd', 5000),
 
---     -- (activities_seq.NEXTVAL, 'xx');
+
+-- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+INSERT INTO activities
+    (activity_id , activity_name, start_time , end_time , budget)
+    VALUES
+(activities_seq.NEXTVAL, 'KUMAR ROAD' , '2003/05/03', 'yyyy/mm/dd', 5000),
+
+
+-- ---------------------------------------------------------------------------------------------------------------------------------
+INSERT INTO activities
+    (activity_id , activity_name, start_time , end_time , budget)
+    VALUES
+(activities_seq.NEXTVAL, 'KUMAR ROAD' , '2003/05/03', 'yyyy/mm/dd', 5000),
+
+
+-- ---------------------------------------------------------------------------------------------------------------------------------
+INSERT INTO activities
+    (activity_id , activity_name, start_time , end_time , budget)
+    VALUES
+(activities_seq.NEXTVAL, 'KUMAR ROAD' , '2003/05/03', 'yyyy/mm/dd', 5000),
+
+
+-- ---------------------------------------------------------------------------------------------------------------------------------
+INSERT INTO activities
+    (activity_id , activity_name, start_time , end_time , budget)
+    VALUES
+(activities_seq.NEXTVAL, 'KUMAR ROAD' , '2003/05/03', 'yyyy/mm/dd', 5000),
+
+
 -- ---------------------------------------------------------------------------------------------------------------------------------
