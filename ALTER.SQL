@@ -93,9 +93,9 @@ ADD CONSTRAINT pk_groups
 PRIMARY KEY (group_id);
 
 ALTER TABLE groups
-ADD CONSTRAINT fk_g_rstaff
-FOREIGN KEY (staff_id, role_id)
-REFERENCES staff_roles(staff_id, role_id)
+ADD CONSTRAINT fk_g_activity
+FOREIGN KEY (activity_id)
+REFERENCES activities(activities_id)
 ON DELETE CASCADE;
 
 
@@ -104,13 +104,13 @@ ON DELETE CASCADE;
 -----------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxx-----------------------------------
 
 ALTER TABLE reviews
-ADD CONSTRAINT pk_resources
-PRIMARY KEY (resource_id);
+ADD CONSTRAINT pk_reviews
+PRIMARY KEY (review_id);
 
 ALTER TABLE reviews
-ADD CONSTRAINT fk_r_activities
-FOREIGN KEY (activity_id)
-REFERENCES activities(activity_id)
+ADD CONSTRAINT fk_r_group
+FOREIGN KEY (group_id)
+REFERENCES groups(group_id)
 ON DELETE CASCADE;
 
 
@@ -126,8 +126,8 @@ ON DELETE CASCADE;
 -----------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxx-----------------------------------
 
 ALTER TABLE actions 
-ADD CONSTRAINT pk_resources
-PRIMARY KEY (resource_id);
+ADD CONSTRAINT pk_action
+PRIMARY KEY (action_id);
 
 ALTER TABLE actions
 ADD CONSTRAINT fk_a_reviews

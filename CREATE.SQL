@@ -90,9 +90,9 @@ CREATE SEQUENCE reviews_seq MINVALUE 1 MAXVALUE 999 START WITH 1 INCREMENT BY 1 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 CREATE TABLE actions(
-    action_id NUMBER(3) ,
+    action_id NUMBER(3),
     result VARCHAR2(20),
-    review_id NUMBER(3) ,
+    review_id NUMBER(3),
     owner_name VARCHAR2(20),
     deadline DATE
 );
