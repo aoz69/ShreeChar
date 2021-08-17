@@ -62,9 +62,22 @@ ON DELETE CASCADE;
 
 -----------------------xxxxxxx   Activity_resources INCOMPLETE  xxxxxxxxxx-----------------------------------
 
+ALTER TABLE activity_resources
+ADD CONSTRAINT fk_a_activities
+FOREIGN KEY (activity_id)
+REFERENCES activities(activity_id)
+ON DELETE CASCADE;
+
+ALTER TABLE resources
+ADD CONSTRAINT fk_a_resources
+FOREIGN KEY (resource_id)
+REFERENCES resources(resource_id)
+ON DELETE CASCADE;
+
+
 ALTER TABLE activity_resources 
-ADD CONSTRAINT pk_a
-PRIMARY KEY (resource_id);
+ADD CONSTRAINT pk_aresources
+PRIMARY KEY (activity_id, resource_id);
 
 
 -----------------------xxxxxxx   Activity_resources INCOMPLETE  xxxxxxxxxx-----------------------------------
@@ -72,7 +85,7 @@ PRIMARY KEY (resource_id);
 -----------------------xxxxxxxxxxx Plans xxxxxxxxxxxxxxxxx-----------------------------------
 
 ALTER TABLE plans 
-ADD CONSTRAINT pk_resources
+ADD CONSTRAINT pk_plans
 PRIMARY KEY (plan_id);
 
 ALTER TABLE plans
@@ -89,9 +102,11 @@ ON DELETE CASCADE;
 
 -----------------------xxxxxxxxxxx Plans xxxxxxxxxxxxxxxxx-----------------------------------
 
+-----------------------xxxxxxxxxxxxx Staff_roles xxxxxxxxxxxxxxx-----------------------------------
+
 ALTER TABLE staff_roles 
 ADD CONSTRAINT pk_sroles
-PRIMARY KEY (staff_id, role_id);
+PRIMARY KEY (staff_role_id);
 
 ALTER TABLE staff_roles
 ADD CONSTRAINT fk_sr_staff
@@ -101,12 +116,13 @@ ON DELETE CASCADE;
 
 ALTER TABLE staff_roles
 ADD CONSTRAINT fk_sr_roles
-FOREIGN KEY (roles_id)
+FOREIGN KEY (role_id)
 REFERENCES roles(role_id)
 ON DELETE CASCADE;
 
 
------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxx-----------------------------------
+-----------------------xxxxxxxxxxxxx Staff_roles xxxxxxxxxxxxxxx-----------------------------------
+
 
 -----------------------xxxxxxx   INCOMPLETE  xxxxxxxxxx-----------------------------------
 
@@ -117,7 +133,13 @@ PRIMARY KEY (group_id);
 ALTER TABLE groups
 ADD CONSTRAINT fk_g_activity
 FOREIGN KEY (activity_id)
-REFERENCES activities(activities_id)
+REFERENCES activities(activity_id)
+ON DELETE CASCADE;
+
+ALTER TABLE groups
+ADD CONSTRAINT fk_g_sroles
+FOREIGN KEY (staff_role_id)
+REFERENCES staff_roles(staff_role_id)
 ON DELETE CASCADE;
 
 

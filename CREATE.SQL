@@ -8,14 +8,13 @@ CREATE SEQUENCE resources_seq MINVALUE 1 MAXVALUE 999 START WITH 1 INCREMENT BY 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 CREATE TABLE stages(
     stage_id NUMBER(3),
-    stage_name VARCHAR2(20),
-	stage_address VARCHAR2(20)
+    stage_name VARCHAR2(20)
 );
 CREATE SEQUENCE stages_seq MINVALUE 1 MAXVALUE 999 START WITH 1 INCREMENT BY 1 CACHE 20;
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 CREATE TABLE roles(
     role_id NUMBER(3),
-    role_name VARCHAR2(10)
+    role_name VARCHAR2(20)
     );
 CREATE SEQUENCE roles_seq MINVALUE 1 MAXVALUE 999 START WITH 1 INCREMENT BY 1 CACHE 20;
 ------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -30,7 +29,7 @@ CREATE SEQUENCE staff_seq MINVALUE 1 MAXVALUE 999 START WITH 1 INCREMENT BY 1 CA
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 CREATE TABLE activities(
     activity_id NUMBER(3),
-    activity_name VARCHAR2(10)
+    activity_name VARCHAR2(20),
     start_time DATE,
     end_time DATE,
     budget NUMBER(5) CHECK(budget > 0)
@@ -64,6 +63,7 @@ CREATE SEQUENCE plans_seq MINVALUE 1 MAXVALUE 999 START WITH 1 INCREMENT BY 1 CA
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 CREATE TABLE staff_roles(
+    staff_role_id NUMBER(3),
     staff_id NUMBER(3),
     role_id NUMBER(3)
 );
@@ -73,7 +73,7 @@ CREATE SEQUENCE staff_roles_seq MINVALUE 1 MAXVALUE 999 START WITH 1 INCREMENT B
 CREATE TABLE groups(
     group_id NUMBER(3) ,
     staff_role_id NUMBER(3) NOT NULL,
-    activity_id NUMBER(3) NOT NULL;
+    activity_id NUMBER(3) NOT NULL
 );
 CREATE SEQUENCE groups_seq MINVALUE 1 MAXVALUE 999 START WITH 1 INCREMENT BY 1 CACHE 20;
 
