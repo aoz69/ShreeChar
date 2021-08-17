@@ -1,31 +1,53 @@
+-----------------------xxxxxxxxxxxxx Resources xxxxxxxxxxxxxxx-----------------------------------
+
 ALTER TABLE resources
 ADD CONSTRAINT pk_resources
 PRIMARY KEY (resource_id);
 
---------------------------------------------------------------------------
+
+-----------------------xxxxxxxxxxxxx Resources xxxxxxxxxxxxxxx-----------------------------------
+
+-----------------------xxxxxxxxxxxxxxx Stages xxxxxxxxxxxxx-----------------------------------
+
 ALTER TABLE stages
 ADD CONSTRAINT pk_stages
 PRIMARY KEY (stage_id);
 
---------------------------------------------------------------------------
+
+-----------------------xxxxxxxxxxxxxxx Stages xxxxxxxxxxxxx-----------------------------------
+
+-----------------------xxxxxxxxxxxxxxxx Roles xxxxxxxxxxxx-----------------------------------
+
 ALTER TABLE roles
 ADD CONSTRAINT pk_roles
 PRIMARY KEY (role_id);
 
---------------------------------------------------------------------------
+ALTER TABLE roles
+ADD CONSTRAINT fk_r_roles
+FOREIGN KEY (role_id)
+REFERENCES roles(role_id)
+ON DELETE CASCADE;
+
+
+-----------------------xxxxxxxxxxxxxxxx Roles xxxxxxxxxxxx-----------------------------------
+
+-----------------------xxxxxxxxxxxxxxxxx Staff xxxxxxxxxxx-----------------------------------
 ALTER TABLE staff
 ADD CONSTRAINT pk_staff
 PRIMARY KEY (staff_id);
 
------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxx-----------------------------------
+
+-----------------------xxxxxxxxxxxxxxxxx Staff xxxxxxxxxxx-----------------------------------
+
+-----------------------xxxxxxxxxxxxxxxxx Activities xxxxxxxxxxx-----------------------------------
 ALTER TABLE activities
 ADD CONSTRAINT pk_activities
 PRIMARY KEY (activity_id);
 
 
------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxx-----------------------------------
+-----------------------xxxxxxxxxxxxxxxxx Activities xxxxxxxxxxx-----------------------------------
 
------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxx-----------------------------------
+-----------------------xxxxxxxxxxxxxxxxxxx Costs xxxxxxxxx-----------------------------------
 ALTER TABLE costs
 ADD CONSTRAINT pk_costs
 PRIMARY KEY (cost_id);
@@ -36,18 +58,18 @@ FOREIGN KEY (activity_id)
 REFERENCES activities(activity_id)
 ON DELETE CASCADE;
 
------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxx-----------------------------------
+-----------------------xxxxxxxxxxxxxxxxxxx Costs xxxxxxxxx-----------------------------------
 
------------------------xxxxxxx   INCOMPLETE  xxxxxxxxxx-----------------------------------
+-----------------------xxxxxxx   Activity_resources INCOMPLETE  xxxxxxxxxx-----------------------------------
 
 ALTER TABLE activity_resources 
 ADD CONSTRAINT pk_a
 PRIMARY KEY (resource_id);
 
 
------------------------xxxxxxx   INCOMPLETE  xxxxxxxxxx-----------------------------------
+-----------------------xxxxxxx   Activity_resources INCOMPLETE  xxxxxxxxxx-----------------------------------
 
------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxx-----------------------------------
+-----------------------xxxxxxxxxxx Plans xxxxxxxxxxxxxxxxx-----------------------------------
 
 ALTER TABLE plans 
 ADD CONSTRAINT pk_resources
@@ -65,7 +87,7 @@ FOREIGN KEY (stage_id)
 REFERENCES stages(stage_id)
 ON DELETE CASCADE;
 
------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxx-----------------------------------
+-----------------------xxxxxxxxxxx Plans xxxxxxxxxxxxxxxxx-----------------------------------
 
 ALTER TABLE staff_roles 
 ADD CONSTRAINT pk_sroles
@@ -99,7 +121,7 @@ REFERENCES activities(activities_id)
 ON DELETE CASCADE;
 
 
------------------------xxxxxxx   INCOMPLETE  xxxxxxxxxx-----------------------------------
+-----------------------xxxxxxx  INCOMPLETE  xxxxxxxxxx-----------------------------------
 
 -----------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxx-----------------------------------
 
