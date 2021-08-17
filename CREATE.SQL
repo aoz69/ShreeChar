@@ -1,7 +1,7 @@
 CREATE TABLE resources (
     resource_id NUMBER(3),
-    resource_name VARCHAR2(20),
-    brief VARCHAR2(10),
+    resource_name VARCHAR2(15),
+    brief VARCHAR2(20),
     cost NUMBER(5)
 );
 CREATE SEQUENCE resources_seq MINVALUE 1 MAXVALUE 999 START WITH 1 INCREMENT BY 1 CACHE 20;
@@ -30,10 +30,10 @@ CREATE SEQUENCE staff_seq MINVALUE 1 MAXVALUE 999 START WITH 1 INCREMENT BY 1 CA
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 CREATE TABLE activities(
     activity_id NUMBER(3),
-    activity_name VARCHAR2(20)
+    activity_name VARCHAR2(10)
     start_time DATE,
     end_time DATE,
-    budget NUMBER(5) check(budget > 0)
+    budget NUMBER(5) CHECK(budget > 0)
 );
 CREATE SEQUENCE activities_seq MINVALUE 1 MAXVALUE 999 START WITH 1 INCREMENT BY 1 CACHE 20;
 ------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -42,13 +42,13 @@ CREATE TABLE costs(
     cost_id NUMBER(3),
 	activity_id NUMBER(3) NOT NULL,
     total_cost NUMBER(5),
-	descript VARCHAR2(45)
+	descript VARCHAR2(20)
 );
 CREATE SEQUENCE costs_seq MINVALUE 1 MAXVALUE 999 START WITH 1 INCREMENT BY 1 CACHE 20;
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 CREATE TABLE activity_resources(
 activity_id NUMBER(3),
- resource_id NUMBER(3) NOT NULL 
+resource_id NUMBER(3) NOT NULL 
 );
 CREATE SEQUENCE activity_resources_seq MINVALUE 1 MAXVALUE 999 START WITH 1 INCREMENT BY 1 CACHE 20;
 
