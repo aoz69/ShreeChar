@@ -451,7 +451,7 @@ INSERT INTO activity_resources (activity_id, resource_id)
 VALUES (2, 4);
 -- ----------------------------PLANS TABLE-------------------------------------
 INSERT INTO plans (
-        plans_id,
+        plan_id,
         activity_id,
         stage_id,
         start_day,
@@ -465,7 +465,7 @@ VALUES (
         TO_DATE('13/10/08', 'DD/MM/RR')
     );
 INSERT INTO plans (
-        plans_id,
+        plan_id,
         activity_id,
         stage_id,
         start_day,
@@ -479,7 +479,7 @@ VALUES (
         TO_DATE('13/1/09', 'DD/MM/RR')
     );
 INSERT INTO plans (
-        plans_id,
+        plan_id,
         activity_id,
         stage_id,
         start_day,
@@ -635,7 +635,7 @@ INSERT INTO actions (
         deadline
     )
 VALUES (
-        staff_seq.NEXTVAL,
+        actions_seq.NEXTVAL,
         'Passed',
         001,
         'Ramesh Ramtel',
@@ -649,7 +649,7 @@ INSERT INTO actions (
         deadline
     )
 VALUES (
-        staff_seq.NEXTVAL,
+        actions_seq.NEXTVAL,
         'Failed',
         002,
         'Sushank Kc',
@@ -663,7 +663,7 @@ INSERT INTO actions (
         deadline
     )
 VALUES (
-        staff_seq.NEXTVAL,
+        actions_seq.NEXTVAL,
         'Failed',
         003,
         'Panas Pokharel',
@@ -677,7 +677,7 @@ INSERT INTO actions (
         deadline
     )
 VALUES (
-        staff_seq.NEXTVAL,
+        actions_seq.NEXTVAL,
         'Passed',
         004,
         'Pasang Sherpa',
@@ -691,7 +691,7 @@ INSERT INTO actions (
         deadline
     )
 VALUES (
-        staff_seq.NEXTVAL,
+        actions_seq.NEXTVAL,
         'Passed',
         005,
         'Nishedh Karki',
