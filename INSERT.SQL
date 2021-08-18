@@ -376,311 +376,326 @@ VALUES(
 
 
 -- ----------------------------COSTS TABLE---------------------------------
--- INSERT INTO costs (
---         cost_id,
---         activity_id,
---         total_cost,
---         descript
---     )
--- VALUES (
---         costs_seq.NEXTVAL,
---         112,
---         500,
---         'For personal use'
---     );
--- INSERT INTO costs (
---         cost_id,
---         activity_id,
---         total_cost,
---         descript
---     )
--- VALUES (
---         costs_seq.NEXTVAL,
---         122,
---         600,
---         'For office use'
---     );
--- INSERT INTO costs (
---         cost_id,
---         activity_id,
---         total_cost,
---         descript
---     )
--- VALUES (
---         costs_seq.NEXTVAL,
---         312,
---         550,
---         'For public use'
---     );
--- INSERT INTO costs (
---         cost_id,
---         activity_id,
---         total_cost,
---         descript
---     )
--- VALUES (
---         costs_seq.NEXTVAL,
---         116,
---         800,
---         'Good to use'
---     );
--- INSERT INTO costs (
---         cost_id,
---         activity_id,
---         total_cost,
---         descript
---     )
--- VALUES (
---         costs_seq.NEXTVAL,
---         111,
---         590,
---         'use'
---     );
+INSERT INTO costs (
+        cost_id,
+        activity_id,
+        total_cost,
+        descript
+    )
+VALUES (
+        costs_seq.NEXTVAL,
+        1,
+        500,
+        'For personal use'
+    );
+INSERT INTO costs (
+        cost_id,
+        activity_id,
+        total_cost,
+        descript
+    )
+VALUES (
+        costs_seq.NEXTVAL,
+        1,
+        600,
+        'For office use'
+    );
+INSERT INTO costs (
+        cost_id,
+        activity_id,
+        total_cost,
+        descript
+    )
+VALUES (
+        costs_seq.NEXTVAL,
+        2,
+        550,
+        'For public use'
+    );
+INSERT INTO costs (
+        cost_id,
+        activity_id,
+        total_cost,
+        descript
+    )
+VALUES (
+        costs_seq.NEXTVAL,
+        3,
+        800,
+        'Good to use'
+    );
+INSERT INTO costs (
+        cost_id,
+        activity_id,
+        total_cost,
+        descript
+    )
+VALUES (
+        costs_seq.NEXTVAL,
+        4,
+        590,
+        'use'
+    );
 -- ----------------------------COSTS TABLE---------------------------------
 
 -- ----------------------------ACTIVITY_RESOURCES TABLE--------------------
--- INSERT INTO activity_resources (activity_id, resource_id)
--- VALUES (staff_seq.NEXTVAL, 232);
--- INSERT INTO activity_resources (activity_id, resource_id)
--- VALUES (staff_seq.NEXTVAL, 222);
--- INSERT INTO activity_resources (activity_id, resource_id)
--- VALUES (staff_seq.NEXTVAL, 242);
--- INSERT INTO activity_resources (activity_id, resource_id)
--- VALUES (staff_seq.NEXTVAL, 252);
--- INSERT INTO activity_resources (activity_id, resource_id)
--- VALUES (staff_seq.NEXTVAL, 262);
+INSERT INTO activity_resources (activity_id, resource_id)
+VALUES (1,1);
+INSERT INTO activity_resources (activity_id, resource_id)
+VALUES (1, 2);
+INSERT INTO activity_resources (activity_id, resource_id)
+VALUES (1, 3);
+INSERT INTO activity_resources (activity_id, resource_id)
+VALUES (2, 1);
+INSERT INTO activity_resources (activity_id, resource_id)
+VALUES (2, 4);
 -- ----------------------------PLANS TABLE-------------------------------------
--- INSERT INTO plans (
---         plans_id,
---         activity_id,
---         stage_id,
---         start_day,
---         end_day
---     )
--- VALUES (
---         plans_seq.NEXTVAL,
---         332,
---         841,
---         '2009/07/08',
---         '2010/05/03'
---     );
--- INSERT INTO plans (
---         plans_id,
---         activity_id,
---         stage_id,
---         start_day,
---         end_day
---     )
--- VALUES (
---         plans_seq.NEXTVAL,
---         333,
---         879,
---         '2001/09/18',
---         '2004/07/23'
---     );
--- INSERT INTO plans (
---         plans_id,
---         activity_id,
---         stage_id,
---         start_day,
---         end_day
---     )
--- VALUES (
---         plans_seq.NEXTVAL,
---         352,
---         889,
---         '2008/08/22',
---         '2011/08/13'
---     );
--- INSERT INTO plans (
---         plans_id,
---         activity_id,
---         stage_id,
---         start_day,
---         end_day
---     )
--- VALUES (
---         plans_seq.NEXTVAL,
---         342,
---         859,
---         '2007/03/10',
---         '2008/12/01'
---     );
--- INSERT INTO plans (
---         plans_id,
---         activity_id,
---         stage_id,
---         start_day,
---         end_day
---     )
--- VALUES (
---         plans_seq.NEXTVAL,
---         372,
---         840,
---         '2006/08/30',
---         '2009/10/09'
---     );
+INSERT INTO plans (
+        plans_id,
+        activity_id,
+        stage_id,
+        start_day,
+        end_day
+    )
+VALUES (
+        plans_seq.NEXTVAL,
+        1,
+        1,
+        TO_DATE('13/10/07', 'DD/MM/RR'),
+        TO_DATE('13/10/08', 'DD/MM/RR')
+    );
+INSERT INTO plans (
+        plans_id,
+        activity_id,
+        stage_id,
+        start_day,
+        end_day
+)
+VALUES (
+        plans_seq.NEXTVAL,
+        1,
+        2,
+        TO_DATE('13/10/08', 'DD/MM/RR'),
+        TO_DATE('13/1/09', 'DD/MM/RR')
+    );
+INSERT INTO plans (
+        plans_id,
+        activity_id,
+        stage_id,
+        start_day,
+        end_day
+    )
+VALUES (
+        plans_seq.NEXTVAL,
+        1,
+        3,
+        TO_DATE('13/1/09', 'DD/MM/RR'),
+        TO_DATE('13/10/09', 'DD/MM/RR')
+    );
+INSERT INTO plans (
+        plans_id,
+        activity_id,
+        stage_id,
+        start_day,
+        end_day
+    )
+VALUES (
+        plans_seq.NEXTVAL,
+        3,
+        2,
+        TO_DATE('13/1/09', 'DD/MM/RR'),
+        TO_DATE('13/10/09', 'DD/MM/RR')
+    );
+INSERT INTO plans (
+        plans_id,
+        activity_id,
+        stage_id,
+        start_day,
+        end_day
+    )
+VALUES (
+        plans_seq.NEXTVAL,
+        2,
+        1,
+        TO_DATE('13/1/09', 'DD/MM/RR'),
+        TO_DATE('13/10/09', 'DD/MM/RR')
+    );
 -- ----------------------------Staff_roles TABLE-------------------------------------
--- INSERT INTO staff_roles (staff_id, role_id)
--- VALUES (staff_seq.NEXTVAL, 472);
--- INSERT INTO staff_roles (staff_id, role_id)
--- VALUES (staff_seq.NEXTVAL, 482);
--- INSERT INTO staff_roles (staff_id, role_id)
--- VALUES (staff_seq.NEXTVAL, 444);
--- INSERT INTO staff_roles (staff_id, role_id)
--- VALUES (staff_seq.NEXTVAL, 494);
--- INSERT INTO staff_roles (staff_id, role_id)
--- VALUES (staff_seq.NEXTVAL, 412);
+INSERT INTO staff_roles (staff_role_id, staff_id, role_id)
+VALUES (staff_roles_seq.NEXTVAL, 4, SELECT role_id FROM roles WHERE role_name = 'LEADER');
+
+INSERT INTO staff_roles (staff_role_id, staff_id, role_id)
+VALUES (staff_roles_seq.NEXTVAL, 4, SELECT role_id FROM roles WHERE role_name = 'PROGRAMMER');
+
+INSERT INTO staff_roles (staff_role_id, staff_id, role_id)
+VALUES (staff_roles_seq.NEXTVAL, 2, 2);
+
+INSERT INTO staff_roles (staff_role_id, staff_id, role_id)
+VALUES (staff_roles_seq.NEXTVAL, 2, 3);
+
+INSERT INTO staff_roles (staff_role_id, staff_id, role_id)
+VALUES (staff_roles_seq.NEXTVAL, 3, 2);
+
+INSERT INTO staff_roles (staff_role_id, staff_id, role_id)
+VALUES (staff_roles_seq.NEXTVAL, 3, 1);
+
+INSERT INTO staff_roles (staff_role_id, staff_id, role_id)
+VALUES (staff_roles_seq.NEXTVAL, 1, 3);
+
+INSERT INTO staff_roles (staff_role_id, staff_id, role_id)
+VALUES (staff_roles_seq.NEXTVAL, 5, 3);
 -- ----------------------------Staff_roles TABLE-------------------------------------
+
+
 -- ----------------------------groups table--------------------------------------
 -- -------------------------------------------------------------------------------
 -- ----------------------------REVIEWS TABLE-------------------------------------
--- INSERT INTO staff (
---         review_id,
---         loco,
---         checked_time,
---         group_id,
---         plan_id,
---         stats
---     )
--- VALUES (
---         staff_seq.NEXTVAL,
---         '2020-5-16',
---         001,
---         001,
---         'Passed'
---     );
--- INSERT INTO staff (
---         review_id,
---         loco,
---         checked_time,
---         group_id,
---         plan_id,
---         stats
---     )
--- VALUES (
---         staff_seq.NEXTVAL,
---         '2020-5-20',
---         002,
---         002,
---         'Processing'
---     );
--- INSERT INTO staff (
---         review_id,
---         loco,
---         checked_time,
---         group_id,
---         plan_id,
---         stats
---     )
--- VALUES (
---         staff_seq.NEXTVAL,
---         '2020-5-16',
---         003,
---         003,
---         'Cancelled'
---     );
--- INSERT INTO staff (
---         review_id,
---         loco,
---         checked_time,
---         group_id,
---         plan_id,
---         stats
---     )
--- VALUES (
---         staff_seq.NEXTVAL,
---         '2020-5-16',
---         004,
---         004,
---         'Passed'
---     );
--- INSERT INTO staff (
---         review_id,
---         loco,
---         checked_time,
---         group_id,
---         plan_id,
---         stats
---     )
--- VALUES (
---         staff_seq.NEXTVAL,
---         '2020-5-16',
---         005,
---         005,
---         'Pending'
---     );
+INSERT INTO reviews(
+        review_id,
+        loco,
+        checked_time,
+        group_id,
+        plan_id,
+        stats
+    )
+VALUES (
+        reviews_seq.NEXTVAL,
+        '2020-5-16',
+        001,
+        001,
+        'Passed'
+    );
+INSERT INTO reviews(
+        review_id,
+        loco,
+        checked_time,
+        group_id,
+        plan_id,
+        stats
+    )
+VALUES (
+        reviews_seq.NEXTVAL,
+        TO_DATE('13/1/09', 'DD/MM/RR'),
+        002,
+        002,
+        'Processing'
+    );
+INSERT INTO reviews(
+        review_id,
+        loco,
+        checked_time,
+        group_id,
+        plan_id,
+        stats
+    )
+VALUES (
+        reviews_seq.NEXTVAL,
+        TO_DATE('13/1/09', 'DD/MM/RR'),
+        003,
+        003,
+        'Cancelled'
+    );
+INSERT INTO reviews(
+        review_id,
+        loco,
+        checked_time,
+        group_id,
+        plan_id,
+        stats
+    )
+VALUES (
+        reviews_seq.NEXTVAL,
+        TO_DATE('13/1/09', 'DD/MM/RR'),
+        004,
+        004,
+        'Passed'
+    );
+INSERT INTO reviews(
+        review_id,
+        loco,
+        checked_time,
+        group_id,
+        plan_id,
+        stats
+    )
+VALUES (
+        reviews_seq.NEXTVAL,
+        TO_DATE('13/1/09', 'DD/MM/RR'),
+        5,
+        5,
+        'Pending'
+    );
 -- ----------------------------REVIEWS TABLE-------------------------------------
 -- ----------------------------ACTIONS TABLE-------------------------------------
--- INSERT INTO actions (
---         action_id,
---         result,
---         review_id,
---         owner_name,
---         deadline
---     )
--- VALUES (
---         staff_seq.NEXTVAL,
---         'Passed',
---         001,
---         'Ramesh Ramtel',
---         '2024-7-12'
---     );
--- INSERT INTO actions (
---         action_id,
---         result,
---         review_id,
---         owner_name,
---         deadline
---     )
--- VALUES (
---         staff_seq.NEXTVAL,
---         'Failed',
---         002,
---         'Sushank Kc',
---         '2024-7-12'
---     );
--- INSERT INTO actions (
---         action_id,
---         result,
---         review_id,
---         owner_name,
---         deadline
---     )
--- VALUES (
---         staff_seq.NEXTVAL,
---         'Failed',
---         003,
---         'Panas Pokharel',
---         '2024-7-12'
---     );
--- INSERT INTO actions (
---         action_id,
---         result,
---         review_id,
---         owner_name,
---         deadline
---     )
--- VALUES (
---         staff_seq.NEXTVAL,
---         'Passed',
---         004,
---         'Pasang Sherpa',
---         '2024-7-12'
---     );
--- INSERT INTO actions (
---         action_id,
---         result,
---         review_id,
---         owner_name,
---         deadline
---     )
--- VALUES (
---         staff_seq.NEXTVAL,
---         'Passed',
---         005,
---         'Nishedh Karki',
---         '2024-7-12'
---     );
+INSERT INTO actions (
+        action_id,
+        result,
+        review_id,
+        owner_name,
+        deadline
+    )
+VALUES (
+        staff_seq.NEXTVAL,
+        'Passed',
+        001,
+        'Ramesh Ramtel',
+        TO_DATE('13/1/09', 'DD/MM/RR')
+    );
+INSERT INTO actions (
+        action_id,
+        result,
+        review_id,
+        owner_name,
+        deadline
+    )
+VALUES (
+        staff_seq.NEXTVAL,
+        'Failed',
+        002,
+        'Sushank Kc',
+        TO_DATE('13/1/09', 'DD/MM/RR')
+    );
+INSERT INTO actions (
+        action_id,
+        result,
+        review_id,
+        owner_name,
+        deadline
+    )
+VALUES (
+        staff_seq.NEXTVAL,
+        'Failed',
+        003,
+        'Panas Pokharel',
+        TO_DATE('13/1/09', 'DD/MM/RR')
+    );
+INSERT INTO actions (
+        action_id,
+        result,
+        review_id,
+        owner_name,
+        deadline
+    )
+VALUES (
+        staff_seq.NEXTVAL,
+        'Passed',
+        004,
+        'Pasang Sherpa',
+        TO_DATE('13/1/09', 'DD/MM/RR')
+    );
+INSERT INTO actions (
+        action_id,
+        result,
+        review_id,
+        owner_name,
+        deadline
+    )
+VALUES (
+        staff_seq.NEXTVAL,
+        'Passed',
+        005,
+        'Nishedh Karki',
+        TO_DATE('13/1/09', 'DD/MM/RR')
+    );
 -- ----------------------------ACTIONS TABLE-------------------------------------
 
