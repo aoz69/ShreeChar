@@ -1,0 +1,9 @@
+@G:\ShreeChar\CREATE.sql
+
+@G:\ShreeChar\ALTER.sql
+
+ @G:\ShreeChar\INSERT.sql
+
+@G:\ShreeChar\QUERRY.sql
+
+@G:\ShreeChar\DROP.sql
