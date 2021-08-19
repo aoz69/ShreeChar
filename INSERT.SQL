@@ -1,3 +1,10 @@
+/*
+- All the tables have been populated with at least 5 data
+- Integrity order is implemented
+- TO_DATE function is used to convert strings into date
+*/
+
+
 ----------------------------STAFF TABLE-------------------------------------
 INSERT INTO staff (
         staff_id,
@@ -13,6 +20,7 @@ VALUES(
         '9811989898',
         'M'
     );
+
 INSERT INTO staff (
         staff_id,
         staff_name,
@@ -27,6 +35,7 @@ VALUES(
         '9869420693',
         'F'
     );
+
 INSERT INTO staff (
         staff_id,
         staff_name,
@@ -41,6 +50,7 @@ VALUES(
         '9899909900',
         'M'
     );
+
 INSERT INTO staff (
         staff_id,
         staff_name,
@@ -55,6 +65,7 @@ VALUES(
         '9804998969',
         'M'
     );
+
 INSERT INTO staff (
         staff_id,
         staff_name,
@@ -69,6 +80,7 @@ VALUES(
         '9801223322',
         'M'
     );
+
 INSERT INTO staff (
         staff_id,
         staff_name,
@@ -83,6 +95,7 @@ VALUES(
         '9801223321',
         'F'
     );
+
 INSERT INTO staff (
         staff_id,
         staff_name,
@@ -97,6 +110,7 @@ VALUES(
         '9801223311',
         'F'
     );
+
 INSERT INTO staff (
         staff_id,
         staff_name,
@@ -116,7 +130,8 @@ VALUES(
 
 ----------------------------ROLES TABLE-------------------------------------
 INSERT INTO roles (
-    role_id, role_name
+    role_id, 
+    role_name
     )
 VALUES (
     roles_seq.NEXTVAL, 
@@ -131,11 +146,16 @@ VALUES (
         roles_seq.NEXTVAL,
         'ENGINEER'
     );
-INSERT INTO roles(role_id, role_name)
+
+INSERT INTO roles(
+    role_id, 
+    role_name
+    )
 VALUES(
         roles_seq.NEXTVAL,
         'NETWORK MANAGER'
     );
+
 INSERT INTO roles (
     role_id, 
     role_name
@@ -144,6 +164,7 @@ VALUES(
         roles_seq.NEXTVAL,
         'TREASURER'
     );
+
 INSERT INTO roles (
         role_id,
         role_name
@@ -152,6 +173,7 @@ VALUES(
         roles_seq.NEXTVAL,
         'SECURITY'
     );
+
 INSERT INTO roles (
         role_id,
         role_name
@@ -160,6 +182,7 @@ VALUES(
         roles_seq.NEXTVAL,
         'PROGRAMMER'
     );
+    
 INSERT INTO roles (
         role_id,
         role_name
@@ -168,6 +191,7 @@ VALUES(
         roles_seq.NEXTVAL,
         'MANAGER'
     );
+
 INSERT INTO roles (
         role_id,
         role_name
@@ -176,6 +200,7 @@ VALUES(
         roles_seq.NEXTVAL,
         'HIRING MANAGER'
     );
+
 INSERT INTO roles (
         role_id,
         role_name
@@ -184,6 +209,7 @@ VALUES(
         roles_seq.NEXTVAL,
         'CONCEPT ARTIST'
     );
+
 INSERT INTO roles (
         role_id,
         role_name
@@ -208,6 +234,7 @@ VALUES (
         'FOR TRANSPORTATION',
         10000
     );
+
 INSERT INTO resources(
         resource_id,
         resource_name,
@@ -220,6 +247,7 @@ VALUES (
         'FOR STORING DATA',
         2000
     );
+
 INSERT INTO resources(
         resource_id,
         resource_name,
@@ -232,6 +260,7 @@ VALUES (
         'FOR OFFICE PURPOSE',
         5000
     );
+
 INSERT INTO resources(
         resource_id,
         resource_name,
@@ -244,6 +273,7 @@ VALUES (
         'FOR STORAGE',
         3000
     );
+
 INSERT INTO resources(
         resource_id,
         resource_name,
@@ -268,31 +298,37 @@ VALUES (
         stages_seq.NEXTVAL,
         'DESIGN'
     );
+
 INSERT INTO stages
 VALUES(
         stages_seq.NEXTVAL,
         'PROTOTYPE'
     );
+
 INSERT INTO stages
 VALUES(
         stages_seq.NEXTVAL,
         'VERTICAL SLICE'
     );
+
 INSERT INTO stages
 VALUES(
         stages_seq.NEXTVAL,
         'ALPHA'
     );
+
 INSERT INTO stages
 VALUES(
         stages_seq.NEXTVAL,
         'BETA'
     );
+
 INSERT INTO stages
 VALUES(
         stages_seq.NEXTVAL,
         'TESTING'
     );
+
 INSERT INTO stages
 VALUES(
         stages_seq.NEXTVAL,
@@ -315,6 +351,7 @@ VALUES(
         TO_DATE('13/09/07', 'DD/MM/RR'),
         10000
 );
+
 INSERT INTO activities(
         activity_id,
         activity_name,
@@ -329,6 +366,7 @@ VALUES(
         TO_DATE('13/09/23', 'DD/MM/RR'),
         20000
 );
+
 INSERT INTO activities(
         activity_id,
         activity_name,
@@ -343,6 +381,7 @@ VALUES(
         TO_DATE('13/09/25', 'DD/MM/RR'),
         23000
 );
+
 INSERT INTO activities(
         activity_id,
         activity_name,
@@ -357,6 +396,7 @@ VALUES(
         TO_DATE('13/09/30', 'DD/MM/RR'),
         98000
 );
+
 INSERT INTO activities(
         activity_id,
         activity_name,
@@ -371,6 +411,7 @@ VALUES(
         TO_DATE('13/09/23', 'DD/MM/RR'),
         50000
 );
+
 ----------------------------ACTIVITIES TABLE----------------------------
 
 
@@ -386,8 +427,9 @@ VALUES (
         costs_seq.NEXTVAL,
         1,
         500,
-        'For personal use'
+        'FOR LAUNCHING'
     );
+
 INSERT INTO costs (
         cost_id,
         activity_id,
@@ -398,8 +440,9 @@ VALUES (
         costs_seq.NEXTVAL,
         1,
         600,
-        'For office use'
+        'FOR DESIGN'
     );
+
 INSERT INTO costs (
         cost_id,
         activity_id,
@@ -410,8 +453,9 @@ VALUES (
         costs_seq.NEXTVAL,
         2,
         550,
-        'For public use'
+        'FOR SERVER'
     );
+
 INSERT INTO costs (
         cost_id,
         activity_id,
@@ -422,8 +466,9 @@ VALUES (
         costs_seq.NEXTVAL,
         3,
         800,
-        'Good to use'
+        'FOR DATABASE'
     );
+
 INSERT INTO costs (
         cost_id,
         activity_id,
@@ -434,21 +479,57 @@ VALUES (
         costs_seq.NEXTVAL,
         4,
         590,
-        'use'
+        'FOR AIR'
     );
+
 -- ----------------------------COSTS TABLE---------------------------------
 
 -- ----------------------------ACTIVITY_RESOURCES TABLE--------------------
-INSERT INTO activity_resources (activity_id, resource_id)
-VALUES (1,1);
-INSERT INTO activity_resources (activity_id, resource_id)
-VALUES (1, 2);
-INSERT INTO activity_resources (activity_id, resource_id)
-VALUES (1, 3);
-INSERT INTO activity_resources (activity_id, resource_id)
-VALUES (2, 1);
-INSERT INTO activity_resources (activity_id, resource_id)
-VALUES (2, 4);
+INSERT INTO activity_resources (
+    activity_id,
+     resource_id
+     )
+VALUES (
+    1,
+    1
+    );
+
+INSERT INTO activity_resources (
+    activity_id, 
+    resource_id
+    )
+VALUES (
+    1, 
+    2
+    );
+
+INSERT INTO activity_resources (
+    activity_id, 
+    resource_id
+    )
+VALUES (
+    1,
+    3
+    );
+
+INSERT INTO activity_resources (
+    activity_id,
+    resource_id
+    )
+VALUES (
+    2, 
+    1
+    );
+
+INSERT INTO activity_resources (
+    activity_id, 
+    resource_id
+    )
+VALUES (
+    2, 
+    4
+    );
+
 -- ----------------------------PLANS TABLE-------------------------------------
 INSERT INTO plans (
         plan_id,
@@ -464,6 +545,7 @@ VALUES (
         TO_DATE('13/10/07', 'DD/MM/RR'),
         TO_DATE('13/10/08', 'DD/MM/RR')
     );
+
 INSERT INTO plans (
         plan_id,
         activity_id,
@@ -478,6 +560,7 @@ VALUES (
         TO_DATE('13/10/08', 'DD/MM/RR'),
         TO_DATE('13/1/09', 'DD/MM/RR')
     );
+
 INSERT INTO plans (
         plan_id,
         activity_id,
@@ -492,6 +575,7 @@ VALUES (
         TO_DATE('13/1/09', 'DD/MM/RR'),
         TO_DATE('13/10/09', 'DD/MM/RR')
     );
+
 INSERT INTO plans (
         plan_id,
         activity_id,
@@ -506,6 +590,7 @@ VALUES (
         TO_DATE('13/1/09', 'DD/MM/RR'),
         TO_DATE('13/10/09', 'DD/MM/RR')
     );
+
 INSERT INTO plans (
         plan_id,
         activity_id,
@@ -520,6 +605,7 @@ VALUES (
         TO_DATE('13/1/09', 'DD/MM/RR'),
         TO_DATE('13/10/09', 'DD/MM/RR')
     );
+    
 -- ----------------------------Staff_roles TABLE-------------------------------------
 INSERT INTO staff_roles (
     staff_role_id, 
@@ -538,6 +624,7 @@ VALUES (
         4,
         6
     );
+
 INSERT INTO staff_roles (
     staff_role_id, 
     staff_id, 
@@ -601,6 +688,7 @@ VALUES (
     5, 
     3
     );
+
 -- ----------------------------Staff_roles TABLE-------------------------------------
 
 
@@ -681,6 +769,7 @@ VALUES (
         1,
         'Passed'
     );
+
 INSERT INTO reviews(
         review_id,
         loco,
@@ -692,11 +781,12 @@ INSERT INTO reviews(
 VALUES (
         reviews_seq.NEXTVAL,
         'Basantapur',
-        TO_DATE('13/1/09', 'DD/MM/RR'),
+        TO_DATE('03/04/22', 'DD/MM/RR'),
         2,
         2,
         'Processing'
     );
+
 INSERT INTO reviews(
         review_id,
         loco,
@@ -708,11 +798,12 @@ INSERT INTO reviews(
 VALUES (
         reviews_seq.NEXTVAL,
         'Bhaktapur',
-        TO_DATE('13/1/09', 'DD/MM/RR'),
+        TO_DATE('06/05/21', 'DD/MM/RR'),
         3,
         3,
         'Cancelled'
     );
+
 INSERT INTO reviews(
         review_id,
         loco,
@@ -724,11 +815,12 @@ INSERT INTO reviews(
 VALUES (
         reviews_seq.NEXTVAL,
         'Purpur',
-        TO_DATE('13/1/09', 'DD/MM/RR'),
+        TO_DATE('08/05/56', 'DD/MM/RR'),
         4,
         4,
         'Passed'
     );
+
 INSERT INTO reviews(
         review_id,
         loco,
@@ -740,11 +832,12 @@ INSERT INTO reviews(
 VALUES (
         reviews_seq.NEXTVAL,
         'Singlepur',
-        TO_DATE('13/1/09', 'DD/MM/RR'),
+        TO_DATE('16/05/07', 'DD/MM/RR'),
         5,
         5,
         'Pending'
     );
+
 -- ----------------------------REVIEWS TABLE-------------------------------------
 -- ----------------------------ACTIONS TABLE-------------------------------------
 INSERT INTO actions (
@@ -759,8 +852,9 @@ VALUES (
         'Passed',
         1,
         'Ramesh Ramtel',
-        TO_DATE('13/1/09', 'DD/MM/RR')
+        TO_DATE('13/01/09', 'DD/MM/RR')
     );
+
 INSERT INTO actions (
         action_id,
         result,
@@ -773,8 +867,9 @@ VALUES (
         'Failed',
         2,
         'Sushank Kc',
-        TO_DATE('13/1/09', 'DD/MM/RR')
+        TO_DATE('13/10/09', 'DD/MM/RR')
     );
+
 INSERT INTO actions (
         action_id,
         result,
@@ -787,8 +882,9 @@ VALUES (
         'Failed',
         3,
         'Panas Pokharel',
-        TO_DATE('13/1/09', 'DD/MM/RR')
+        TO_DATE('13/01/09', 'DD/MM/RR')
     );
+
 INSERT INTO actions (
         action_id,
         result,
@@ -801,8 +897,9 @@ VALUES (
         'Passed',
         4,
         'Pasang Sherpa',
-        TO_DATE('13/1/09', 'DD/MM/RR')
+        TO_DATE('22/06/21', 'DD/MM/RR')
     );
+
 INSERT INTO actions (
         action_id,
         result,
@@ -815,7 +912,7 @@ VALUES (
         'Passed',
         5,
         'Nishedh Karki',
-        TO_DATE('13/1/09', 'DD/MM/RR')
+        TO_DATE('23/05/25', 'DD/MM/RR')
     );
--- ----------------------------ACTIONS TABLE-------------------------------------
 
+-- ----------------------------ACTIONS TABLE-------------------------------------

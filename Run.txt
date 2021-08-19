@@ -2,7 +2,7 @@
 
 @G:\ShreeChar\ALTER.sql
 
- @G:\ShreeChar\INSERT.sql
+@G:\ShreeChar\INSERT.sql
 
 @G:\ShreeChar\QUERRY.sql
 

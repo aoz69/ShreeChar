@@ -1,3 +1,11 @@
+/*
+- All the constraints are declared in the following for all tables
+- Foreign keys are cascaded on delete
+- Primary keys are given
+- Integrity order is implemented
+*/
+
+
 -----------------------xxxxxxxxxxxxx Resources xxxxxxxxxxxxxxx-----------------------------------
 
 ALTER TABLE resources
@@ -21,13 +29,6 @@ PRIMARY KEY (stage_id);
 ALTER TABLE roles
 ADD CONSTRAINT pk_roles
 PRIMARY KEY (role_id);
-
-ALTER TABLE roles
-ADD CONSTRAINT fk_r_roles
-FOREIGN KEY (role_id)
-REFERENCES roles(role_id)
-ON DELETE CASCADE;
-
 
 -----------------------xxxxxxxxxxxxxxxx Roles xxxxxxxxxxxx-----------------------------------
 
@@ -60,7 +61,7 @@ ON DELETE CASCADE;
 
 -----------------------xxxxxxxxxxxxxxxxxxx Costs xxxxxxxxx-----------------------------------
 
------------------------xxxxxxx   Activity_resources INCOMPLETE  xxxxxxxxxx-----------------------------------
+-----------------------xxxxxxx   Activity_resources  xxxxxxxxxx-----------------------------------
 
 ALTER TABLE activity_resources
 ADD CONSTRAINT fk_a_activities
@@ -74,13 +75,13 @@ FOREIGN KEY (resource_id)
 REFERENCES resources(resource_id)
 ON DELETE CASCADE;
 
-
+-- Composite key created from two foreign keys 
 ALTER TABLE activity_resources 
 ADD CONSTRAINT pk_aresources
 PRIMARY KEY (activity_id, resource_id);
 
 
------------------------xxxxxxx   Activity_resources INCOMPLETE  xxxxxxxxxx-----------------------------------
+-----------------------xxxxxxx   Activity_resources xxxxxxxxxx-----------------------------------
 
 -----------------------xxxxxxxxxxx Plans xxxxxxxxxxxxxxxxx-----------------------------------
 
@@ -124,7 +125,7 @@ ON DELETE CASCADE;
 -----------------------xxxxxxxxxxxxx Staff_roles xxxxxxxxxxxxxxx-----------------------------------
 
 
------------------------xxxxxxx   INCOMPLETE  xxxxxxxxxx-----------------------------------
+-----------------------xxxxxxx   Groups  xxxxxxxxxx-----------------------------------
 
 ALTER TABLE groups 
 ADD CONSTRAINT pk_groups
@@ -143,9 +144,9 @@ REFERENCES staff_roles(staff_role_id)
 ON DELETE CASCADE;
 
 
------------------------xxxxxxx  INCOMPLETE  xxxxxxxxxx-----------------------------------
+-----------------------xxxxxxx Groups   xxxxxxxxxx-----------------------------------
 
------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxx-----------------------------------
+-----------------------xxxxxxxxx Reviews xxxxxxxxxxxxxxxxxxx-----------------------------------
 
 ALTER TABLE reviews
 ADD CONSTRAINT pk_reviews
@@ -165,9 +166,9 @@ REFERENCES plans(plan_id)
 ON DELETE CASCADE;
 
 
------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxx-----------------------------------
+-----------------------xxxxxxxxxxxx Reviews xxxxxxxxxxxxxxxx-----------------------------------
 
------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxx-----------------------------------
+-----------------------xxxxxxxxxxxxx Actions xxxxxxxxxxxxxxx-----------------------------------
 
 ALTER TABLE actions 
 ADD CONSTRAINT pk_action
@@ -180,4 +181,4 @@ REFERENCES reviews(review_id)
 ON DELETE CASCADE;
 
 
------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxx-----------------------------------
+-----------------------xxxxxxxxxxxx Actions xxxxxxxxxxxxxxxx-----------------------------------
